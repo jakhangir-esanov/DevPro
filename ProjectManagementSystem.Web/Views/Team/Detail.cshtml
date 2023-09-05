@@ -1,0 +1,52 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Members;
+@model IEnumerable<MemberResultDto>;
+
+<h1>Details</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            @{
+                var id = Model.FirstOrDefault();
+            }
+            <th>@Html.DisplayNameFor(item => id.Id)</th>
+            <th>@Html.DisplayNameFor(item => id.FirstName)</th>
+            <th>@Html.DisplayNameFor(item => id.LastName)</th>
+            <th>@Html.DisplayNameFor(item => id.Email)</th>
+            <th>Team Member</th>
+            <th>@Html.DisplayNameFor(item => id.Role)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(i => item.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.LastName)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Email)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Team.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Role)
+                </th>
+            </tr>
+        }
+        <tr>
+            <th>
+                <form asp-controller="Team" asp-action="Index">
+                    <button class="btn btn-success btn-rounded mb-3" style="background-color: red">Back</button>
+                </form>
+            </th>
+        </tr>
+    </tbody>
+</table>

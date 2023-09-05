@@ -1,0 +1,48 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Tasks;
+@model TaskResultDto;
+
+<h1>Details</h1>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>DeadLine</th>
+            <th>Project Id</th>
+            <th>Member Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                @Html.DisplayFor(i => Model.Id)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Name)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Description)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.DueDate)
+            </th>
+             <th>
+                @Html.DisplayFor(i => Model.Project.Id)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Member.Id)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <form asp-controller="Task" asp-action="Index">
+                    <button class="btn btn-success btn-rounded mb-3" style="background-color: red">Back</button>
+                </form>
+            </th>
+        </tr>
+    </tbody>
+</table>

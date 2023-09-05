@@ -1,0 +1,39 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Teams;
+@model TeamCreationDto;
+
+<h1>Create</h1>
+﻿
+<br />
+<div class="container">
+    <form asp-controller="Team" asp-action="Create" method="post">
+        <div class="row">
+            <div class="col mb-4">
+                <label asp-for="Name" class="mb-1">Name</label>
+                <input asp-for="Name" type="text" class="form-control" />
+            </div>
+            <div class="col mb-4">
+                <label asp-for="Description" class="mb-1">Description</label>
+                <input asp-for="Description" type="text" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+                <button class="btn btn-danger pe-xxl-4 text-center" asp-action="Index">Back</button>
+                <button class="btn btn-primary pe-xxl-4 text-center" asp-action="Create">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

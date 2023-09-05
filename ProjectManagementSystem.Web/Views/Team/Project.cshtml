@@ -1,0 +1,56 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Projects;
+@model IEnumerable<ProjectResultDto>;
+
+<h1>Projects</h1>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            @{
+                var id = Model.FirstOrDefault();
+            }
+            <th>@Html.DisplayNameFor(item => id.Id)</th>
+            <th>@Html.DisplayNameFor(item => id.Name)</th>
+            <th>@Html.DisplayNameFor(item => id.Description)</th>
+            <th>@Html.DisplayNameFor(item => id.StartDate)</th>
+            <th>@Html.DisplayNameFor(item => id.EndDate)</th>
+            <th>@Html.DisplayNameFor(item => id.Status)</th>
+            <th>Project Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(i => item.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Name)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Description)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.StartDate)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.EndDate)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Status)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Team.Id)
+                </th>
+            </tr>
+        }
+        <tr>
+            <th>
+                <p><a class="btn btn-primary" asp-controller="Team" asp-action="Index" style="background-color: red">Back</a></p>
+            </th>
+        </tr>
+    </tbody>
+</table>

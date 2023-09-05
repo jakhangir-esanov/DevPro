@@ -1,0 +1,27 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Tasks;
+@model IEnumerable<TaskResultDto>;
+
+<h1>Remainders</h1>
+<br />
+
+<div class="container">
+    <div class="row mb-3">
+        @foreach(var item in Model)
+        {
+            <div class="col-3 mb-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">MemberId: @item.Member.Id</p>
+                        <p class="card-text">DeadLine: @item.DueDate</p>
+                        <p class="card-text">Hurry up! Your time is limited!</p>
+                        <form asp-controller="Project" asp-action="Detail" asp-route-id="@item.Project.Id">
+                            <button class="btn btn-primary">Go Project</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

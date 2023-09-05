@@ -1,0 +1,52 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Tasks;
+@model IEnumerable<TaskResultDto>;
+
+
+<table class="table">
+    <thead>
+        <tr>
+            @{
+                var id = Model.FirstOrDefault();
+            }
+            <th>@Html.DisplayNameFor(item => id.Id)</th>
+            <th>@Html.DisplayNameFor(item => id.Name)</th>
+            <th>@Html.DisplayNameFor(item => id.Description)</th>
+            <th>@Html.DisplayNameFor(item => id.DueDate)</th>
+            <th>Project Id</th>
+            <th>Member Id</th>
+            <th>Edit</th>
+            <th>Details</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(i => item.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Name)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Description)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.DueDate)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Project.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Member.Id)
+                </th>
+            </tr>
+        }
+        <tr>
+            <th>
+                <p><a class="btn btn-primary" asp-controller="Project" asp-action="Index" style="background-color: red">Back</a></p>
+            </th>
+        </tr>
+    </tbody>
+</table>

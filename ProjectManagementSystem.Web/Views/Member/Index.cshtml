@@ -1,0 +1,68 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Members;
+@model IEnumerable<MemberResultDto>;
+
+<div class="row">
+    <div class="col-11">
+        <h1 class="mb-3 mt-2">Members</h1>
+    </div>
+    <div class="col-1 mt-4">
+        <p><a class="btn btn-primary" asp-controller="Member" asp-action="Create" style="background-color: green">Create</a></p>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            @{
+                var id = Model.FirstOrDefault();
+            }
+            <th>@Html.DisplayNameFor(item => id.Id)</th>
+            <th>@Html.DisplayNameFor(item => id.FirstName)</th>
+            <th>@Html.DisplayNameFor(item => id.LastName)</th>
+            <th>@Html.DisplayNameFor(item => id.Email)</th>
+            <th>Team Member</th>
+            <th>@Html.DisplayNameFor(item => id.Role)</th>
+            <th>Edit</th>
+            <th>Details</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(i => item.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.LastName)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Email)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Team.Id)
+                </th>
+                <th>
+                    @Html.DisplayFor(i => item.Role)
+                </th>
+                <th>
+                    <p><a class="btn btn-primary" asp-controller="Member" asp-action="Edit" asp-route-id="@item.Id">Edit</a></p>
+                </th>
+                <th>
+                    <form asp-controller="Member" asp-action="Detail" asp-route-id="@item.Id">
+                        <button class="btn btn-success btn-rounded mb-3" style="background-color: orange">Detail</button>
+                    </form>
+                </th>
+                <th>
+                    <form asp-controller="Member" asp-action="Delete" asp-route-id="@item.Id">
+                        <button class="btn btn-success btn-rounded mb-3" style="background-color: red">Delete</button>
+                    </form>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>

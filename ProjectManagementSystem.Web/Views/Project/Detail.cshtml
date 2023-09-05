@@ -1,0 +1,48 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Projects;
+@model ProjectResultDto;
+
+<h1>Details</h1>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+            <th>Team Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                @Html.DisplayFor(i => Model.Id)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Name)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Status)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Team.Id)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <form asp-controller="Project" asp-action="Index">
+                    <button class="btn btn-success btn-rounded mb-3" style="background-color: red">Back</button>
+                </form>
+            </th>
+        </tr>
+    </tbody>
+</table>

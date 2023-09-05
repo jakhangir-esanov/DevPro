@@ -1,0 +1,60 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Tasks;
+@model TaskCreationDto;
+
+
+<h1>Create</h1>
+﻿
+<br />
+<div class="container">
+    <form asp-controller="Task" asp-action="Create" method="post">
+        <div class="row">
+            <div class="col mb-4">
+                <label asp-for="Name" class="mb-1">Name</label>
+                <input asp-for="Name" type="text" class="form-control" />
+            </div>
+            <div class="col mb-4">
+                <label asp-for="Description" class="mb-1"></label>
+                <input asp-for="Description" type="text" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mb-4">
+                <label asp-for="DueDate" class="mb-1 font-size:">DeadLine</label>
+                <input asp-for="DueDate" type="date" class="form-control" />
+            </div>
+            <div class="col mb-4">
+                <label asp-for="projectId" class="mb-1 font-size:">Project Id</label>
+                <input asp-for="projectId" type="number" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mb-4">
+                <label asp-for="memberId" class="mb-1 font-size:">Member Id</label>
+                <input asp-for="memberId" type="number" class="form-control" />
+            </div>
+            <div class="col mb-4">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+            </div>
+            <div class="col">
+                <button class="btn btn-danger pe-xxl-4 text-center" asp-action="Index">Back</button>
+                <button class="btn btn-primary pe-xxl-4 text-center" asp-action="Create">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+﻿@using ProjectManagementSystem.Service.DTOs.Members;
+@model MemberResultDto;
+
+<h1>Details</h1>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>FristName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Team Id</th>
+            <th>Team Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                @Html.DisplayFor(i => Model.Id)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.LastName)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Email)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Team.Id)
+            </th>
+            <th>
+                @Html.DisplayFor(i => Model.Role)
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <form asp-controller="Member" asp-action="Index">
+                    <button class="btn btn-success btn-rounded mb-3" style="background-color: red">Back</button>
+                </form>
+            </th>
+        </tr>
+    </tbody>
+</table>
