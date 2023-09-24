@@ -53,6 +53,16 @@ git clone https://github.com/jakhangir-esanov/DevPro
 4. **Access DevPro:**
 - Open your web browser and navigate to the application URL.
 
+## Contributing
+
+1. Fork the repository.
+2. Create new branch for your feature or bugfix:
+```
+git checkout -b feature/my-new-feature
+```
+3. Make your changes, commit them, and push your fork.
+4. Create a Pull Request (PR) to the main repository's main branch, explaining your changes and their purpose.
+
 ## Usage
 
 - **Login:** Use your credentials to access the system as either a project manager or employee.
