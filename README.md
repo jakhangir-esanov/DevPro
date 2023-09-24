@@ -1,9 +1,8 @@
-# DevPro
-# About Projectify - Project Management System
+# About DevPro - Project Management System
 
 ## Overview
 
-Projectify is a robust and user-friendly project management system designed to streamline project development processes. Built using .NET and C#, this platform empowers project managers and team members alike to efficiently plan, execute, and monitor projects with ease.
+DevPro is a robust and user-friendly project management system designed to streamline project development processes. Built using .NET and C#, this platform empowers project managers and team members alike to efficiently plan, execute, and monitor projects with ease.
 
 ## Key Features
 
@@ -40,6 +39,9 @@ Projectify is a robust and user-friendly project management system designed to s
 To start using Projectify, follow these steps:
 
 1. **Clone the Repository:**
+```
+git clone https://github.com/jakhangir-esanov/DevPro
+```
 2. **Configure Database:**
 - Update the database connection details in the application settings.
 - Execute database migrations to create the necessary tables.
@@ -59,21 +61,8 @@ To start using Projectify, follow these steps:
 - **Team Collaboration:** Build teams and collaborate efficiently.
 - **Task Management:** Create, assign, and oversee tasks within projects.
 
-## Contributing
-
-If you'd like to contribute to Projectify, please read our [Contributing Guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-Special thanks to [mention any libraries, frameworks, or individuals you'd like to acknowledge] for their contributions and support.
-
 ## Contact
 
-For inquiries or support, please contact [your email address].
+For inquiries or support, please contact alibaba.esanov@gmail.com.
 
----
 
