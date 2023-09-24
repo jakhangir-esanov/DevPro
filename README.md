@@ -43,14 +43,14 @@ To start using Projectify, follow these steps:
 git clone https://github.com/jakhangir-esanov/DevPro
 ```
 2. **Configure Database:**
-- Update the database connection details in the application settings.
+- Update the database connection details in the appsetting.json.
 - Execute database migrations to create the necessary tables.
 
 3. **Build and Launch:**
 - Build the application using Visual Studio or the .NET CLI.
 - Start the application.
 
-4. **Access Projectify:**
+4. **Access DevPro:**
 - Open your web browser and navigate to the application URL.
 
 ## Usage
